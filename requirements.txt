@@ -10,5 +10,4 @@ google-generativeai
 python-dotenv
 pymongo
 bson
-gemini-handler
 gunicorn
