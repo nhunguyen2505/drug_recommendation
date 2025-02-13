@@ -1,0 +1,13 @@
+Flask
+flask_pymongo
+flask_cors
+bcrypt
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+google-generativeai
+python-dotenv
+pymongo
+bson
+gemini-handler

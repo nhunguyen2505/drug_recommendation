@@ -1,0 +1,267 @@
+:root {
+    --primary: #202123;
+    --overhover: hsla(240, 9%, 59%, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: courier;
+  }
+  
+  nav {
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+  }
+  
+  nav div {
+    margin: 0 20px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .ham-menu {
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .ham-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    background: black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+  
+  .ham-menu:hover span {
+    background: white;
+  }
+  
+  #main {
+    display: flex;
+  }
+  
+  /*Side Nav*/
+  #sidenav {
+    height: 100vh;
+    width: 20rem;
+    background-color: var(--primary);
+    font-size: 1rem;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0;
+    z-index: 11;
+  }
+  
+  #sidenav .sidenav-content {
+    padding: 0.5rem;
+  }
+  
+  #close {
+    position: absolute;
+    right: -40px;
+    background: var(--primary);
+    color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    width: 40px;
+    height: 40px;
+  }
+  #close span {
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+  #close span:before,
+  #close span:after {
+    position: absolute;
+    content: " ";
+    top: -16px;
+    left: -1px;
+    height: 33px;
+    width: 3px;
+    background-color: black;
+  }
+  #close span:before {
+    transform: rotate(45deg);
+  }
+  #close span:after {
+    transform: rotate(-45deg);
+  }
+  
+  #close:hover span:after,
+  #close:hover span:before {
+    background: white;
+  }
+  
+  #new-chat-btn {
+    background: var(--primary);
+    color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    text-align: start;
+    padding: 0.7rem;
+    font-size: inherit;
+  }
+  
+  #new-chat-btn:hover {
+    background: var(--overhover);
+  }
+  
+  .new-chat {
+    cursor: pointer;
+  }
+  
+  .saved-chats {
+    margin: 0.5rem 0;
+  }
+  
+  .saved-chats p {
+    padding: 0.8rem;
+    margin: 3px 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .saved-chats p:hover {
+    background: var(--overhover);
+  }
+  
+  .saved-chats .selected {
+    padding: 0.8rem;
+    background: var(--overhover);
+    margin: 3px 0;
+    border-radius: 5px;
+  }
+  
+  .config {
+    margin: 0.5rem 0;
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    background: var(--primary);
+  }
+  
+  .config p {
+    padding: 0.7rem;
+    cursor: pointer;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  .config p:hover {
+    background: var(--overhover);
+  }
+  
+  .config hr {
+    width: 19rem;
+  }
+  
+  /*Main Content Body*/
+  #content-body {
+    height: 100vh;
+    background-color: white;
+    text-align: center;
+    margin-left: 20rem;
+    flex: 1;
+  }
+  
+  #messages {
+    padding-bottom: 100px;
+  }
+  
+  .message-div {
+    display: flex;
+    margin: 10px auto;
+    max-width: 800px;
+    justify-content: start;
+  }
+  
+  .user-message {
+    background: ;
+    padding: 10px;
+  }
+  
+  .gpt-message {
+    background: rgba(247, 247, 248);
+    padding: 10px;
+  }
+  
+  .message-profile-pic {
+    margin-right: 20px;
+  }
+  
+  .message-content {
+    text-align: start;
+    margin-top: 5px;
+  }
+  
+  .message-content p {
+    margin-bottom: 20px;
+  }
+  
+  #chat-section {
+    width: -webkit-fill-available;
+    height: 130px;
+    background-image: linear-gradient(to bottom, transparent 10%, white 90%);
+    position: fixed;
+    bottom: 0;
+  }
+  
+  #chat-section div {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+  }
+  
+  #chat-section input {
+    padding: 0.9rem;
+    border-radius: 5px;
+    border: 0.1px solid grey;
+    width: 90%;
+    font-size: 20px;
+    box-shadow: 0 0 7px 0px grey;
+  }
+  
+  #chat-section input:focus {
+    outline: none;
+  }
+  
+  @media screen and (max-width: 800px) {
+    nav {
+      display: flex;
+    }
+    #close {
+      display: block;
+    }
+    #sidenav {
+      position: fixed;
+      left: -400px;
+    }
+    #content-body {
+      margin: 50px 0 0 0;
+    }
+  }
+  
