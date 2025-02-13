@@ -390,5 +390,16 @@ def logout():
 
 
 
+# if __name__ == "__main__":
+#     app.run(debug=True)
+    
+    
+
+import os
+from gunicorn.app.base import BaseApplication
+
+port = os.environ.get("PORT", 5000)  # Default to 5000 if PORT is not set
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    from app import app  # Import your Flask or FastAPI app
+    app.run(host='0.0.0.0', port=int(port))
