@@ -17,7 +17,7 @@ from gemini_handler import GeminiHandler, GenerationConfig, Strategy, KeyRotatio
 from dotenv import load_dotenv
 # Load biến môi trường từ file .env
 load_dotenv()
-GEMINI_API_KEYS = os.getenv("GEMINI_API_KEYS")
+GEMINI_API_KEYS = os.getenv("GEMINI_API_KEYS").split(",")
 
 # Khởi tạo Flask app
 app = Flask(__name__)
@@ -397,11 +397,6 @@ def logout():
 
 import os
 from gunicorn.app.base import BaseApplication
-
-import os
-from flask import Flask
-
-app = Flask(__name__)
 
 if __name__ == "__main__":
     port = os.environ.get("PORT", 5001)  # Use Render's PORT environment variable
