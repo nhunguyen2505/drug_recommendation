@@ -403,10 +403,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return 'Drug Recommendation API'
-
 if __name__ == "__main__":
     port = os.environ.get("PORT", 5001)  # Use Render's PORT environment variable
     app.run(host="0.0.0.0", port=int(port))  # Bind to all interfaces, using the port specified
