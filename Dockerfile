@@ -17,7 +17,7 @@ COPY . /app/
 EXPOSE 5000
 
 # Command to run the app with Gunicorn (for production use)
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5000"]
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:$PORT"]
 
 # For development (uncomment the following line if you're in development mode):
 # CMD ["python", "app.py"]
