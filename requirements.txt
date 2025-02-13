@@ -11,3 +11,4 @@ python-dotenv
 pymongo
 bson
 gemini-handler
+gunicorn
