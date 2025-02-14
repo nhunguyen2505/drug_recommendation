@@ -17,7 +17,7 @@ from gemini_handler import GeminiHandler, GenerationConfig, Strategy, KeyRotatio
 from dotenv import load_dotenv
 # Load biến môi trường từ file .env
 load_dotenv()
-GEMINI_API_KEYS = os.getenv("GEMINI_API_KEYS").split(",")
+GEMINI_API_KEYS = "d79a0d619cec3273323f9de6872a64dd"
 
 # Khởi tạo Flask app
 app = Flask(__name__)
