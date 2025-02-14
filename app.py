@@ -400,5 +400,5 @@ from gunicorn.app.base import BaseApplication
 
 if __name__ == "__main__":
     port = os.environ.get("PORT", 5001)  # Use Render's PORT environment variable
-    app.run(host="0.0.0.0", port=int(port))  # Bind to all interfaces, using the port specified
+    app.run(host="100.20.92.101", port=int(port))  # Bind to all interfaces, using the port specified
 
